@@ -10,17 +10,11 @@
 
 <h1>Online Courses Application</h1>
 
-<nav>
-  <ul>
-    <li><a href="<%=root_path%>">Home</a></li>
-    <li><a href="<%=courses_path%>">Courses</a></li>
-    <li><a href="<%=about_path%>">About</a></li>
-  </ul>
-</nav>
+<%= render 'layouts/partials/nav' %>
 
 <%= yield %>
 
-<footer>Done by Adrien - &copy 2016 Adrien Dubois</footer>
+<%= render 'layouts/partials/footer' %>
 
 </body>
 </html>
