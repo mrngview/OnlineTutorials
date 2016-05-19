@@ -4,6 +4,8 @@
 <% @courses.each do |course| %>
   <article>
     <h2><%= course.title %></h2>
+    <img src="<%=course.image.url(:thumb)%>" alt= "Image of <%=course.title%> course.">
     <p><%= course.description %></p>
+
   </article>
 <% end %>
