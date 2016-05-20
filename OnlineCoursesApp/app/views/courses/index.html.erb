@@ -1,12 +1,12 @@
-<h1>Courses (<%= @courses.count %>)</h1>
+<h1 id='title'>We currently have <%= @courses.count %> courses available for you</h1>
 
-
-<% @courses.each do |course| %>
-  <article>
-    <h2><%= course.title %></h2>
-    <img src="<%=course.image.url(:thumb)%>" alt= "Image of <%=course.title%> course.">
-    <p><%= course.description %></p>
-
-    <hr>
-  </article>
-<% end %>
+<div class="row">
+  <% @courses.each do |course| %>
+    <div class="col-md-4 col-sm-6 box-properties">
+      <h2><%= course.title %></h2>
+      <img src="<%=course.image.url(:thumb)%>" alt= "Image of <%=course.title%> course.">
+      <p><%= course.description %></p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    </div>
+  <% end %>
+</div>
